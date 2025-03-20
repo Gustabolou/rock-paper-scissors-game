@@ -1,0 +1,68 @@
+:root {
+    --cor-primaria: #020649;
+    --cor-secundaria: #04f7ea;
+    --cor-verde: rgba(1, 252, 97, 0.8);
+    --cor-vermelha: tomato;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to top, var(--cor-primaria), var(--cor-secundaria)); 
+    color: #ffffff; 
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainContent {
+    background: linear-gradient(to top, var(--cor-secundaria), var(--cor-primaria)); 
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--cor-secundaria);
+    color: #ffffff;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: var(--cor-verde);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#playerDisplay, #computerDisplay, #resultDisplay {
+    width: 200px;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff; /* Alterado para branco */
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#resultDisplay.win {
+    background-color: var(--cor-verde);
+}
+
+#resultDisplay.lose {
+    background-color: var(--cor-vermelha);
+}
